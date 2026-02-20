@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Resource Optimization Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Resource Optimization Platform</h1>
+        <div>
+            <button id="view-logs-btn" class="header-btn">View Logs</button>
+            <button id="dark-mode-toggle" class="header-btn">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page 1: Landing Page -->
+        <section id="landing-page">
+            <h2>Welcome!</h2>
+            <p>Estimate your household's water and electricity consumption, understand your efficiency, and receive actionable steps to reduce your usage and save money.</p>
+            <button id="start-assessment-btn">Start Assessment</button>
+        </section>
+
+        <!-- Page 2: Household Profile Page -->
+        <section id="profile-page" class="hidden">
+            <h2>Household Profile</h2>
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="residents">Number of residents:</label>
+                    <select id="residents" name="residents" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="house-type">House type:</label>
+                    <select id="house-type" name="houseType" required>
+                        <option value="flat">Flat / Apartment</option>
+                        <option value="independent">Independent House</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="city-type">City type:</label>
+                    <select id="city-type" name="cityType" required>
+                        <option value="metro">Metro</option>
+                        <option value="non-metro">Non-Metro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="region">State/Region:</label>
+                    <select id="region" name="region" required>
+                        <option value="DELHI">Delhi</option>
+                        <option value="MUMBAI">Mumbai</option>
+                        <option value="KARNATAKA">Karnataka</option>
+                        <option value="TAMIL_NADU">Tamil Nadu</option>
+                        <option value="OTHER" selected>Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Next: Enter Usage</button>
+                <button type="button" class="secondary-btn back-to-landing">Back</button>
+            </form>
+        </section>
+
+        <!-- Page 3: Usage Input Page -->
+        <section id="usage-page" class="hidden">
+            <h2>Usage Input</h2>
+            <form id="usage-form">
+                <div class="form-card">
+                    <h3>Electricity</h3>
+                    <div class="form-group">
+                        <label for="ac-usage">AC usage (hours/day):</label>
+                        <input type="number" id="ac-usage" name="acUsage" min="0" max="24" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="ac-star-rating">AC Star Rating:</label>
+                        <select id="ac-star-rating" name="acStarRating">
+                            <option value="1">1 Star</option>
+                            <option value="2">2 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="5" selected>5 Stars</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ac-age">AC Age (years):</label>
+                        <input type="number" id="ac-age" name="acAge" min="0" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="geyser-usage">Geyser usage (minutes/day):</label>
+                        <input type="number" id="geyser-usage" name="geyserUsage" min="0" max="120" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="geyser-star-rating">Geyser Star Rating:</label>
+                        <select id="geyser-star-rating" name="geyserStarRating">
+                            <option value="1">1 Star</option>
+                            <option value="2">2 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="5" selected>5 Stars</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="geyser-age">Geyser Age (years):</label>
+                        <input type="number" id="geyser-age" name="geyserAge" min="0" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="refrigerator-type">Refrigerator type:</label>
+                        <select id="refrigerator-type" name="refrigeratorType">
+                            <option value="single">Single Door</option>
+                            <option value="double">Double Door</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="refrigerator-star-rating">Refrigerator Star Rating:</label>
+                        <select id="refrigerator-star-rating" name="refrigeratorStarRating">
+                            <option value="1">1 Star</option>
+                            <option value="2">2 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="5" selected>5 Stars</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="refrigerator-age">Refrigerator Age (years):</label>
+                        <input type="number" id="refrigerator-age" name="refrigeratorAge" min="0" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="washing-machine-cycles">Washing machine (cycles/week):</label>
+                        <input type="number" id="washing-machine-cycles" name="washingMachineCycles" min="0" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="washing-machine-type">Washing machine type:</label>
+                        <select id="washing-machine-type" name="washingMachineType">
+                            <option value="semi-automatic">Semi-Automatic</option>
+                            <option value="top-load">Top Load</option>
+                            <option value="front-load">Front Load</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lighting-type">Primary lighting type:</label>
+                        <select id="lighting-type" name="lightingType">
+                            <option value="led">LED</option>
+                            <option value="cfl">CFL</option>
+                            <option value="tube">Tube Light</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lighting-duration">Lighting usage (hours/day):</label>
+                        <input type="number" id="lighting-duration" name="lightingDuration" min="0" max="24" value="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="fan-count">Number of fans:</label>
+                        <input type="number" id="fan-count" name="fanCount" min="0" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="fan-duration">Fan usage (hours/day):</label>
+                        <input type="number" id="fan-duration" name="fanDuration" min="0" max="24" value="8">
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h3>Water</h3>
+                    <div class="form-group">
+                        <label for="bathing">Bathing method:</label>
+                        <select id="bathing" name="bathing">
+                            <option value="bucket">Bucket</option>
+                            <option value="shower">Shower</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="shower-flow-rate">Shower Flow Rate:</label>
+                        <select id="shower-flow-rate" name="showerFlowRate">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bath-frequency">Baths per person (per day):</label>
+                        <input type="number" id="bath-frequency" name="bathFrequency" min="1" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="pump-usage">Water pump usage (minutes/day):</label>
+                        <input type="number" id="pump-usage" name="pumpUsage" min="0" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="toilet-flushes">Toilet flushes (per person/day):</label>
+                        <input type="number" id="toilet-flushes" name="toiletFlushes" min="1" value="4">
+                    </div>
+                    <div class="form-group">
+                        <label for="toilet-flush-type">Toilet Flush Type:</label>
+                        <select id="toilet-flush-type" name="toiletFlushType">
+                            <option value="single">Single Flush</option>
+                            <option value="dual" selected>Dual Flush</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="washing-clothes">Washing clothes (times/week):</label>
+                        <input type="number" id="washing-clothes" name="washingClothes" min="0" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="gardening">Do you have a garden?</label>
+                        <select id="gardening" name="gardening">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="garden-size">Garden Size:</label>
+                        <select id="garden-size" name="gardenSize">
+                            <option value="small">Small</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="water-leakage">Do you have any known water leakages?</label>
+                        <select id="water-leakage" name="waterLeakage">
+                            <option value="no" selected>No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">Calculate & See Results</button>
+                <button type="button" class="secondary-btn back-to-profile">Back</button>
+            </form>
+        </section>
+
+        <!-- Page 4: Results Page -->
+        <section id="results-page" class="hidden">
+            <h2>Your Results</h2>
+
+            <div class="toggle-container">
+                <button id="energy-toggle" class="toggle-btn active">Energy</button>
+                <button id="water-toggle" class="toggle-btn">Water</button>
+            </div>
+
+            <div id="energy-results">
+                <div id="energy-consumption-summary"></div>
+                <div id="energy-optimization-actions"></div>
+            </div>
+
+            <div id="water-results" class="hidden">
+                <div id="water-consumption-summary"></div>
+                <div id="water-optimization-actions"></div>
+            </div>
+
+            <button id="track-progress-btn">Save and Track Progress</button>
+            <button type="button" class="secondary-btn start-over-btn">Start Over</button>
+        </section>
+        
+        <!-- Page 5: Dashboard Page -->
+        <section id="dashboard-page" class="hidden">
+            <h2>Your Progress Dashboard</h2>
+            <div id="progress-summary"></div>
+        </section>
+
+        <!-- Page 6: Logs Page -->
+        <section id="logs-page" class="hidden">
+            <h2>User Logs</h2>
+            <div id="logs-content"></div>
+            <button type="button" class="secondary-btn back-to-landing">Back</button>
+        </section>
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

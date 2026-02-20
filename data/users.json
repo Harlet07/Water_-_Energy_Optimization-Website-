@@ -1,0 +1,26 @@
+[
+  {
+    "id": "user_1771304778333_m1mpefuf0",
+    "residents": "1",
+    "houseType": "flat",
+    "cityType": "metro",
+    "region": "OTHER",
+    "createdAt": "2026-02-17T05:06:18.333Z"
+  },
+  {
+    "id": "user_1771304808861_ie99msxxl",
+    "residents": "3",
+    "houseType": "independent",
+    "cityType": "non-metro",
+    "region": "KARNATAKA",
+    "createdAt": "2026-02-17T05:06:48.861Z"
+  },
+  {
+    "id": "user_1771306433187_05tfj0bx4",
+    "residents": "3",
+    "houseType": "independent",
+    "cityType": "non-metro",
+    "region": "KARNATAKA",
+    "createdAt": "2026-02-17T05:33:53.187Z"
+  }
+]

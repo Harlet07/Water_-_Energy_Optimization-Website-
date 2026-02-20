@@ -1,0 +1,72 @@
+[
+  {
+    "userId": "user_1771304808861_ie99msxxl",
+    "usage": {
+      "electricity": {
+        "acUsage": "0",
+        "acStarRating": "5",
+        "acAge": "0",
+        "geyserUsage": "15",
+        "geyserStarRating": "4",
+        "geyserAge": "3",
+        "refrigeratorType": "double",
+        "refrigeratorStarRating": "5",
+        "refrigeratorAge": "8",
+        "washingMachineCycles": "0",
+        "washingMachineType": "semi-automatic",
+        "lightingType": "tube",
+        "lightingDuration": "12",
+        "fanCount": "2",
+        "fanDuration": "6"
+      },
+      "water": {
+        "bathing": "shower",
+        "showerFlowRate": "medium",
+        "bathFrequency": "1",
+        "pumpUsage": "60",
+        "toiletFlushes": "3",
+        "toiletFlushType": "dual",
+        "washingClothes": "7",
+        "gardening": "yes",
+        "gardenSize": "large",
+        "waterLeakage": "no"
+      }
+    },
+    "date": "2026-02-17T05:10:32.720Z"
+  },
+  {
+    "userId": "user_1771306433187_05tfj0bx4",
+    "usage": {
+      "electricity": {
+        "acUsage": "0",
+        "acStarRating": "5",
+        "acAge": "0",
+        "geyserUsage": "15",
+        "geyserStarRating": "4",
+        "geyserAge": "3",
+        "refrigeratorType": "double",
+        "refrigeratorStarRating": "5",
+        "refrigeratorAge": "8",
+        "washingMachineCycles": "0",
+        "washingMachineType": "semi-automatic",
+        "lightingType": "tube",
+        "lightingDuration": "12",
+        "fanCount": "2",
+        "fanDuration": "6"
+      },
+      "water": {
+        "bathing": "shower",
+        "showerFlowRate": "medium",
+        "bathFrequency": "1",
+        "pumpUsage": "60",
+        "toiletFlushes": "3",
+        "toiletFlushType": "dual",
+        "washingClothes": "7",
+        "gardening": "yes",
+        "gardenSize": "large",
+        "waterLeakage": "no"
+      }
+    },
+    "date": "2026-02-17T05:34:01.241Z"
+  }
+]
